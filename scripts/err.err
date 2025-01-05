@@ -1,0 +1,57 @@
+Using cache found in /home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main
+/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/swiglu_ffn.py:43: UserWarning: xFormers is available (SwiGLU)
+  warnings.warn("xFormers is available (SwiGLU)")
+/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py:27: UserWarning: xFormers is available (Attention)
+  warnings.warn("xFormers is available (Attention)")
+/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py:33: UserWarning: xFormers is available (Block)
+  warnings.warn("xFormers is available (Block)")
+Traceback (most recent call last):
+  File "/public_bme2/bme-dgshen/ZhaoyuQiu/CS276_FinalProject/test.py", line 16, in <module>
+    output = model(dummy_input)
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/models/vision_transformer.py", line 325, in forward
+    ret = self.forward_features(*args, **kwargs)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/models/vision_transformer.py", line 261, in forward_features
+    x = blk(x)
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py", line 254, in forward
+    return super().forward(x_or_x_list)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py", line 112, in forward
+    x = x + attn_residual_func(x)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/block.py", line 91, in attn_residual_func
+    return self.ls1(self.attn(self.norm1(x)))
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_data/home/qiuzhy2024/.cache/torch/hub/facebookresearch_dinov2_main/dinov2/layers/attention.py", line 84, in forward
+    x = memory_efficient_attention(q, k, v, attn_bias=attn_bias)
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/xformers/ops/fmha/__init__.py", line 196, in memory_efficient_attention
+    return _memory_efficient_attention(
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/xformers/ops/fmha/__init__.py", line 294, in _memory_efficient_attention
+    return _memory_efficient_attention_forward(
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/xformers/ops/fmha/__init__.py", line 310, in _memory_efficient_attention_forward
+    op = _dispatch_fw(inp)
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/xformers/ops/fmha/dispatch.py", line 98, in _dispatch_fw
+    return _run_priority_list(
+  File "/home_data/home/qiuzhy2024/anaconda3/envs/dinov2/lib/python3.9/site-packages/xformers/ops/fmha/dispatch.py", line 73, in _run_priority_list
+    raise NotImplementedError(msg)
+NotImplementedError: No operator found for `memory_efficient_attention_forward` with inputs:
+     query       : shape=(1, 257, 12, 64) (torch.float32)
+     key         : shape=(1, 257, 12, 64) (torch.float32)
+     value       : shape=(1, 257, 12, 64) (torch.float32)
+     attn_bias   : <class 'NoneType'>
+     p           : 0.0
+`cutlassF` is not supported because:
+    device=cpu (supported: {'cuda'})
+`flshattF` is not supported because:
+    device=cpu (supported: {'cuda'})
+    dtype=torch.float32 (supported: {torch.bfloat16, torch.float16})
+`tritonflashattF` is not supported because:
+    device=cpu (supported: {'cuda'})
+    dtype=torch.float32 (supported: {torch.bfloat16, torch.float16})
+    Operator wasn't built - see `python -m xformers.info` for more info
+    triton is not available
+`smallkF` is not supported because:
+    max(query.shape[-1] != value.shape[-1]) > 32
+    unsupported embed per head: 64
