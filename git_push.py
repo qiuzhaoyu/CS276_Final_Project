@@ -2,7 +2,7 @@ import os
 import subprocess
 from datetime import datetime
 
-def auto_push(repo_path="./", branch="main"): 
+def auto_push(repo_path="./", branch="main"):  
     """
     Automate git add, commit, and push process.
 
