@@ -1,5 +1,7 @@
-Job running on nodes: bme_gpu06
-Job started at: Sun Jan  5 20:44:05 CST 2025
-Is CUDA available? False
-CUDA device count: 0
-Job ended at: Sun Jan  5 20:44:10 CST 2025
+Job running on nodes: bme_gpu05
+Job started at: Mon Jan  6 15:13:41 CST 2025
+Using device: cuda
+Loading DINOv2 model...
+Input tensor converted to float16 for GPU acceleration.
+Model output shape: torch.Size([1, 768])
+Job ended at: Mon Jan  6 15:13:53 CST 2025
