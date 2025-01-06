@@ -25,7 +25,7 @@ model.eval()
 
 # 示例输入张量 (假设输入为 3x224x224 的 RGB 图像)
 dummy_input = torch.randn(1, 3, 224, 224).to(device)
-
+ 
 # 如果运行在 GPU 上，转换输入张量为 float16
 if device.type == "cuda":
     dummy_input = dummy_input.half()  # 转换为 float16
