@@ -38,7 +38,7 @@ def mIoU(pred_mask, mask, smooth=1e-10, n_classes=4):
 
 def test_predict(model, image):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.load_state_dict(torch.load('/public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/best_model.pth', map_location=device))
+    model.load_state_dict(torch.load('/public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/best_model_UNet.pth', map_location=device))
     model.eval()
     model.to(device)
     image = image.to(device)
@@ -174,7 +174,7 @@ def train_model(model, train_loader, val_loader, optimizer, criterion, epochs, d
         # Save best model
         if val_miou > best_val_miou:
             best_val_miou = val_miou
-            torch.save(model.state_dict(), "best_model.pth")
+            torch.save(model.state_dict(), "best_model_UNet.pth")
             print(f"Epoch {epoch+1}: Best model saved with val_mIoU {best_val_miou:.4f}")
 
         # Update history
@@ -202,8 +202,8 @@ def main():
     palette = [[0], [1], [2], [3]]
     masks_radiopedia_recover = np.array([onehot_to_mask(m, palette) for m in masks_radiopedia])
     masks_medseg_recover = np.array([onehot_to_mask(m, palette) for m in masks_medseg])
-    (rad_train_imgs, rad_train_masks), (rad_val_imgs, rad_val_masks) = split_data(images_radiopedia, masks_radiopedia_recover, 0.9)
-    (med_train_imgs, med_train_masks), (med_val_imgs, med_val_masks) = split_data(images_medseg, masks_medseg_recover, 0.9)
+    (rad_train_imgs, rad_train_masks), (rad_val_imgs, rad_val_masks) = split_data(images_radiopedia, masks_radiopedia_recover, 0.8)
+    (med_train_imgs, med_train_masks), (med_val_imgs, med_val_masks) = split_data(images_medseg, masks_medseg_recover, 0.8)
     train_imgs = np.concatenate((rad_train_imgs, med_train_imgs))
     train_masks = np.concatenate((rad_train_masks, med_train_masks))
     val_imgs = np.concatenate((rad_val_imgs, med_val_imgs))
@@ -220,11 +220,11 @@ def main():
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
 
-    history = train_model(model, train_loader, val_loader, optimizer, criterion, epochs=5, device=device)
+    history = train_model(model, train_loader, val_loader, optimizer, criterion, epochs=500, device=device)
     print("Training completed.")
 
     # 将 history 保存为 .pkl 文件
-    with open('history.pkl', 'wb') as file:
+    with open('UNet_history.pkl', 'wb') as file:
         pickle.dump(history, file)
     
     test_images_torch = torch.from_numpy(test_images_medseg).float()  # shape [10, 512, 512, 1]
@@ -246,7 +246,7 @@ def main():
          test_masks_prediction.ravel().astype(int)), axis=-1),
     columns=['Id', 'Predicted']).set_index('Id')
 
-    submission.to_csv('sub.csv')
+    submission.to_csv('submission.csv')
     print("训练与验证流程结束。")
 
 if __name__ == "__main__":
