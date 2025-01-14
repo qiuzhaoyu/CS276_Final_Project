@@ -9,7 +9,7 @@
 #SBATCH --partition=bme_gpu 
 #SBATCH -o /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/scripts/out.out  # 标准输出日志
 #SBATCH -e /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/scripts/err.err  # 错误日志
-#SBATCH -t 1:30:00 
+#SBATCH -t 5:30:00 
 
 # 打印作业信息
 echo "Job running on nodes: ${SLURM_JOB_NODELIST}"  # 打印节点列表
@@ -21,7 +21,8 @@ module load cuda/7/11.8
 
 # python -u /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/DINOv2_for_GI_Tract_Image_Segmentation/efficientnet-segmentation.py
 # python -u /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/DINOv2_for_GI_Tract_Image_Segmentation/efficientnet-segmentation2.py
-python -u /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/DINOv2_for_Pneumonia_CT_Segmentation/UNet_segmentation.py
+# python -u /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/DINOv2_for_Pneumonia_CT_Segmentation/UNet_segmentation.py
+python -u /public_bme2/bme-dgshen/ZhaoyuQiu/CS276_Final_Project/DINOv2_for_Pneumonia_CT_Segmentation/Dinov2_segmentation2.py
 
 # 打印结束时间
 echo "Job ended at: $(date)"
