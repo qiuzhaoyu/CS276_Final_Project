@@ -1,25 +1,3 @@
-Job running on nodes: bme_gpu03
-Job started at: Tue Jan 14 20:06:17 CST 2025
-训练集大小: 743
-验证集大小: 186
-Epoch 1: Best model saved with val_mIoU 0.6963
-Epoch 1/100: Train Loss: 0.1835, Acc: 0.9413, mIoU: 0.6718 | Val Loss: 0.1573, Acc: 0.9528, mIoU: 0.6963
-Epoch 2: Best model saved with val_mIoU 0.7339
-Epoch 2/100: Train Loss: 0.1086, Acc: 0.9639, mIoU: 0.7368 | Val Loss: 0.0965, Acc: 0.9676, mIoU: 0.7339
-Epoch 3/100: Train Loss: 0.0862, Acc: 0.9703, mIoU: 0.7623 | Val Loss: 0.1053, Acc: 0.9692, mIoU: 0.7272
-Epoch 4: Best model saved with val_mIoU 0.7547
-Epoch 4/100: Train Loss: 0.0807, Acc: 0.9726, mIoU: 0.7695 | Val Loss: 0.0811, Acc: 0.9717, mIoU: 0.7547
-Epoch 5/100: Train Loss: 0.0669, Acc: 0.9765, mIoU: 0.7887 | Val Loss: 0.0783, Acc: 0.9721, mIoU: 0.7460
-Epoch 6/100: Train Loss: 0.0626, Acc: 0.9777, mIoU: 0.7960 | Val Loss: 0.1175, Acc: 0.9621, mIoU: 0.7456
-Epoch 7/100: Train Loss: 0.0574, Acc: 0.9794, mIoU: 0.8062 | Val Loss: 0.1302, Acc: 0.9608, mIoU: 0.7493
-Epoch 8: Best model saved with val_mIoU 0.7642
-Epoch 8/100: Train Loss: 0.0591, Acc: 0.9792, mIoU: 0.8062 | Val Loss: 0.0685, Acc: 0.9754, mIoU: 0.7642
-Epoch 9: Best model saved with val_mIoU 0.7725
-Epoch 9/100: Train Loss: 0.0502, Acc: 0.9816, mIoU: 0.8151 | Val Loss: 0.0664, Acc: 0.9757, mIoU: 0.7725
-Epoch 10/100: Train Loss: 0.0482, Acc: 0.9826, mIoU: 0.8223 | Val Loss: 0.0770, Acc: 0.9748, mIoU: 0.7708
-Epoch 11: Best model saved with val_mIoU 0.7731
-Epoch 11/100: Train Loss: 0.0465, Acc: 0.9827, mIoU: 0.8245 | Val Loss: 0.0615, Acc: 0.9775, mIoU: 0.7731
-Epoch 12: Best model saved with val_mIoU 0.7771
-Epoch 12/100: Train Loss: 0.0434, Acc: 0.9839, mIoU: 0.8309 | Val Loss: 0.0572, Acc: 0.9796, mIoU: 0.7771
-Epoch 13/100: Train Loss: 0.0400, Acc: 0.9848, mIoU: 0.8332 | Val Loss: 0.0589, Acc: 0.9798, mIoU: 0.7674
-Epoch 14/100: Train Loss: 0.0375, Acc: 0.9856, mIoU: 0.8395 | Val Loss: 0.0664, Acc: 0.9760, mIoU: 0.7736
+Job running on nodes: bme_gpu05
+Job started at: Fri Jan 17 23:04:36 CST 2025
+阶段1：训练解码器

@@ -94,6 +94,19 @@ class CovidSegDataset(Dataset):
         mask_tensor = torch.from_numpy(mask).long()
         return img_tensor, mask_tensor
 
+def custom_transform(image, mask):
+    # 随机水平翻转
+    if random.random() > 0.5:
+        image = np.fliplr(image).copy()
+        mask = np.fliplr(mask).copy()
+    
+    # 随机垂直翻转
+    if random.random() > 0.5:
+        image = np.flipud(image).copy()
+        mask = np.flipud(mask).copy()
+    
+    return image, mask
+
 # --------------------- 3. 模型定义 --------------------- #
 # class DoubleConv(nn.Module):
 #     def __init__(self, in_channels, out_channels):
@@ -182,7 +195,7 @@ class DinoSegmentationModel(nn.Module):
         输入数据预处理
         """
         transform = T.Compose([
-            T.Resize((self.patch_size * 32, self.patch_size * 32)),
+            T.Resize((self.patch_size * 38, self.patch_size * 38)),
             T.Normalize(mean=(0.5,), std=(0.5,)),  # 医学图像通常使用单通道归一化
         ])
         x = torch.cat([x] * 3, dim=1)  # 扩展为 3 通道
@@ -193,7 +206,7 @@ class DinoSegmentationModel(nn.Module):
         前向传播
         """
         # 数据预处理
-        x = self.preprocess(x / 255.0)
+        x = self.preprocess(x)
 
         # 提取特征
         features_dict = self.backbone.forward_features(x)
@@ -284,15 +297,15 @@ def main():
     palette = [[0], [1], [2], [3]]
     masks_radiopedia_recover = np.array([onehot_to_mask(m, palette) for m in masks_radiopedia])
     masks_medseg_recover = np.array([onehot_to_mask(m, palette) for m in masks_medseg])
-    (rad_train_imgs, rad_train_masks), (rad_val_imgs, rad_val_masks) = split_data(images_radiopedia, masks_radiopedia_recover, 0.8)
-    (med_train_imgs, med_train_masks), (med_val_imgs, med_val_masks) = split_data(images_medseg, masks_medseg_recover, 0.8)
+    (rad_train_imgs, rad_train_masks), (rad_val_imgs, rad_val_masks) = split_data(images_radiopedia, masks_radiopedia_recover, 0.9)
+    (med_train_imgs, med_train_masks), (med_val_imgs, med_val_masks) = split_data(images_medseg, masks_medseg_recover, 0.9)
     train_imgs = np.concatenate((rad_train_imgs, med_train_imgs))
     train_masks = np.concatenate((rad_train_masks, med_train_masks))
     val_imgs = np.concatenate((rad_val_imgs, med_val_imgs))
     val_masks = np.concatenate((rad_val_masks, med_val_masks))
     print("训练集大小:", len(train_imgs))
     print("验证集大小:", len(val_imgs))
-    train_dataset = CovidSegDataset(train_imgs, train_masks)
+    train_dataset = CovidSegDataset(train_imgs, train_masks, transform=custom_transform)
     val_dataset = CovidSegDataset(val_imgs, val_masks)
     batch_size = 1
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
@@ -306,7 +319,7 @@ def main():
     model = DinoSegmentationModel(backbone=dinov2_vitb14, num_classes=4, patch_size=14, feat_dim=384).cuda()
     criterion = nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=3e-4)
-    scheduler = CosineAnnealingLR(optimizer, T_max=20, eta_min=5e-5)
+    scheduler = CosineAnnealingLR(optimizer, T_max=20, eta_min=5e-4)
 
     history = train_model(model, train_loader, val_loader, optimizer, scheduler, criterion, epochs=100, device=device)
     print("Training completed.")
