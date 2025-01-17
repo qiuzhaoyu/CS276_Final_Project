@@ -33,3 +33,7 @@ Epoch 21: Best model saved with val_mIoU 0.7646
 Epoch 21/105: Train Loss: 0.0414, Acc: 0.9840, mIoU: 0.8217 | Val Loss: 0.0739, Acc: 0.9727, mIoU: 0.7646
 Epoch 22/105: Train Loss: 0.0435, Acc: 0.9832, mIoU: 0.8166 | Val Loss: 0.0656, Acc: 0.9762, mIoU: 0.7635
 Epoch 23/105: Train Loss: 0.0429, Acc: 0.9835, mIoU: 0.8191 | Val Loss: 0.2249, Acc: 0.9206, mIoU: 0.7127
+Epoch 24/105: Train Loss: 0.0436, Acc: 0.9832, mIoU: 0.8162 | Val Loss: 0.0748, Acc: 0.9727, mIoU: 0.7593
+Epoch 25/105: Train Loss: 0.0467, Acc: 0.9821, mIoU: 0.8110 | Val Loss: 0.0895, Acc: 0.9673, mIoU: 0.7496
+Epoch 26/105: Train Loss: 0.0433, Acc: 0.9834, mIoU: 0.8188 | Val Loss: 0.1039, Acc: 0.9638, mIoU: 0.7385
+Epoch 27/105: Train Loss: 0.0478, Acc: 0.9821, mIoU: 0.8090 | Val Loss: 0.0895, Acc: 0.9681, mIoU: 0.7474
