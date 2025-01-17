@@ -8,3 +8,9 @@ Epoch 2/105: Train Loss: 0.0834, Acc: 0.9696, mIoU: 0.7396 | Val Loss: 0.1079, A
 Epoch 3/105: Train Loss: 0.0689, Acc: 0.9742, mIoU: 0.7642 | Val Loss: 0.1235, Acc: 0.9618, mIoU: 0.7019
 Epoch 4/105: Train Loss: 0.0633, Acc: 0.9764, mIoU: 0.7782 | Val Loss: 0.1412, Acc: 0.9441, mIoU: 0.7209
 Epoch 5/105: Train Loss: 0.0627, Acc: 0.9765, mIoU: 0.7806 | Val Loss: 0.1371, Acc: 0.9489, mIoU: 0.7007
+Epoch 6: Best model saved with val_mIoU 0.7285
+Epoch 6/105: Train Loss: 0.0590, Acc: 0.9780, mIoU: 0.7881 | Val Loss: 0.0969, Acc: 0.9662, mIoU: 0.7285
+Epoch 7/105: Train Loss: 0.0547, Acc: 0.9796, mIoU: 0.7932 | Val Loss: 0.1187, Acc: 0.9588, mIoU: 0.7232
+Epoch 8: Best model saved with val_mIoU 0.7419
+Epoch 8/105: Train Loss: 0.0503, Acc: 0.9808, mIoU: 0.8000 | Val Loss: 0.0826, Acc: 0.9697, mIoU: 0.7419
+Epoch 9/105: Train Loss: 0.0492, Acc: 0.9813, mIoU: 0.8042 | Val Loss: 0.1911, Acc: 0.9314, mIoU: 0.6766
