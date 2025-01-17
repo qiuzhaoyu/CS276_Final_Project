@@ -75,3 +75,51 @@ Epoch 59/105: Train Loss: 0.0546, Acc: 0.9804, mIoU: 0.8060 | Val Loss: 0.0954, 
 Epoch 60/105: Train Loss: 0.0432, Acc: 0.9836, mIoU: 0.8190 | Val Loss: 0.0878, Acc: 0.9698, mIoU: 0.7515
 Epoch 61/105: Train Loss: 0.0409, Acc: 0.9844, mIoU: 0.8225 | Val Loss: 0.0741, Acc: 0.9735, mIoU: 0.7678
 Epoch 62/105: Train Loss: 0.0403, Acc: 0.9846, mIoU: 0.8241 | Val Loss: 0.0807, Acc: 0.9718, mIoU: 0.7660
+Epoch 63/105: Train Loss: 0.0441, Acc: 0.9835, mIoU: 0.8185 | Val Loss: 0.0982, Acc: 0.9672, mIoU: 0.7422
+Epoch 64/105: Train Loss: 0.0390, Acc: 0.9849, mIoU: 0.8275 | Val Loss: 0.0642, Acc: 0.9771, mIoU: 0.7693
+Epoch 65/105: Train Loss: 0.0373, Acc: 0.9855, mIoU: 0.8295 | Val Loss: 0.1075, Acc: 0.9652, mIoU: 0.7502
+Epoch 66/105: Train Loss: 0.0386, Acc: 0.9851, mIoU: 0.8285 | Val Loss: 0.0906, Acc: 0.9707, mIoU: 0.7509
+Epoch 67/105: Train Loss: 0.0359, Acc: 0.9860, mIoU: 0.8332 | Val Loss: 0.1016, Acc: 0.9677, mIoU: 0.7472
+Epoch 68/105: Train Loss: 0.0361, Acc: 0.9859, mIoU: 0.8333 | Val Loss: 0.0641, Acc: 0.9773, mIoU: 0.7696
+Epoch 69/105: Train Loss: 0.0351, Acc: 0.9863, mIoU: 0.8356 | Val Loss: 0.0917, Acc: 0.9709, mIoU: 0.7551
+Epoch 70/105: Train Loss: 0.0348, Acc: 0.9863, mIoU: 0.8357 | Val Loss: 0.0835, Acc: 0.9728, mIoU: 0.7567
+Epoch 71/105: Train Loss: 0.0342, Acc: 0.9866, mIoU: 0.8365 | Val Loss: 0.0886, Acc: 0.9711, mIoU: 0.7640
+Epoch 72/105: Train Loss: 0.0339, Acc: 0.9867, mIoU: 0.8383 | Val Loss: 0.0851, Acc: 0.9718, mIoU: 0.7647
+Epoch 73/105: Train Loss: 0.0331, Acc: 0.9870, mIoU: 0.8395 | Val Loss: 0.0683, Acc: 0.9762, mIoU: 0.7664
+Epoch 74/105: Train Loss: 0.0330, Acc: 0.9870, mIoU: 0.8401 | Val Loss: 0.0828, Acc: 0.9726, mIoU: 0.7642
+Epoch 75/105: Train Loss: 0.0331, Acc: 0.9870, mIoU: 0.8394 | Val Loss: 0.0810, Acc: 0.9719, mIoU: 0.7646
+Epoch 76/105: Train Loss: 0.0329, Acc: 0.9870, mIoU: 0.8403 | Val Loss: 0.0714, Acc: 0.9755, mIoU: 0.7663
+Epoch 77/105: Train Loss: 0.0327, Acc: 0.9871, mIoU: 0.8417 | Val Loss: 0.0745, Acc: 0.9753, mIoU: 0.7671
+Epoch 78/105: Train Loss: 0.0326, Acc: 0.9872, mIoU: 0.8411 | Val Loss: 0.0746, Acc: 0.9743, mIoU: 0.7717
+Epoch 79/105: Train Loss: 0.0335, Acc: 0.9868, mIoU: 0.8407 | Val Loss: 0.1099, Acc: 0.9680, mIoU: 0.7476
+Epoch 80/105: Train Loss: 0.0331, Acc: 0.9870, mIoU: 0.8391 | Val Loss: 0.0842, Acc: 0.9724, mIoU: 0.7613
+Epoch 81/105: Train Loss: 0.0340, Acc: 0.9866, mIoU: 0.8388 | Val Loss: 0.0769, Acc: 0.9745, mIoU: 0.7679
+Epoch 82/105: Train Loss: 0.0336, Acc: 0.9868, mIoU: 0.8393 | Val Loss: 0.0637, Acc: 0.9778, mIoU: 0.7737
+Epoch 83/105: Train Loss: 0.0361, Acc: 0.9859, mIoU: 0.8327 | Val Loss: 0.2163, Acc: 0.9499, mIoU: 0.7091
+Epoch 84/105: Train Loss: 0.0363, Acc: 0.9859, mIoU: 0.8342 | Val Loss: 0.0871, Acc: 0.9714, mIoU: 0.7562
+Epoch 85/105: Train Loss: 0.0349, Acc: 0.9864, mIoU: 0.8364 | Val Loss: 0.0829, Acc: 0.9723, mIoU: 0.7606
+Epoch 86/105: Train Loss: 0.0352, Acc: 0.9863, mIoU: 0.8360 | Val Loss: 0.0789, Acc: 0.9756, mIoU: 0.7556
+Epoch 87/105: Train Loss: 0.0372, Acc: 0.9856, mIoU: 0.8304 | Val Loss: 0.1149, Acc: 0.9649, mIoU: 0.7463
+Epoch 88/105: Train Loss: 0.0422, Acc: 0.9841, mIoU: 0.8228 | Val Loss: 0.0733, Acc: 0.9744, mIoU: 0.7651
+Epoch 89/105: Train Loss: 0.0372, Acc: 0.9856, mIoU: 0.8298 | Val Loss: 0.1242, Acc: 0.9658, mIoU: 0.7433
+Epoch 90/105: Train Loss: 0.0393, Acc: 0.9849, mIoU: 0.8282 | Val Loss: 0.1034, Acc: 0.9682, mIoU: 0.7505
+Epoch 91/105: Train Loss: 0.0368, Acc: 0.9858, mIoU: 0.8312 | Val Loss: 0.1166, Acc: 0.9643, mIoU: 0.7446
+Epoch 92/105: Train Loss: 0.0365, Acc: 0.9857, mIoU: 0.8321 | Val Loss: 0.0792, Acc: 0.9723, mIoU: 0.7648
+Epoch 93/105: Train Loss: 0.0354, Acc: 0.9862, mIoU: 0.8349 | Val Loss: 0.0888, Acc: 0.9690, mIoU: 0.7625
+Epoch 94/105: Train Loss: 0.0348, Acc: 0.9865, mIoU: 0.8358 | Val Loss: 0.0825, Acc: 0.9726, mIoU: 0.7552
+Epoch 95/105: Train Loss: 0.0398, Acc: 0.9848, mIoU: 0.8286 | Val Loss: 0.0946, Acc: 0.9674, mIoU: 0.7520
+Epoch 96/105: Train Loss: 0.0357, Acc: 0.9862, mIoU: 0.8341 | Val Loss: 0.1097, Acc: 0.9671, mIoU: 0.7537
+Epoch 97/105: Train Loss: 0.0340, Acc: 0.9867, mIoU: 0.8384 | Val Loss: 0.1063, Acc: 0.9681, mIoU: 0.7529
+Epoch 98/105: Train Loss: 0.0339, Acc: 0.9867, mIoU: 0.8382 | Val Loss: 0.0970, Acc: 0.9703, mIoU: 0.7548
+Epoch 99/105: Train Loss: 0.0331, Acc: 0.9870, mIoU: 0.8395 | Val Loss: 0.0831, Acc: 0.9731, mIoU: 0.7604
+Epoch 100/105: Train Loss: 0.0330, Acc: 0.9870, mIoU: 0.8413 | Val Loss: 0.0957, Acc: 0.9700, mIoU: 0.7610
+Epoch 101/105: Train Loss: 0.0328, Acc: 0.9871, mIoU: 0.8408 | Val Loss: 0.0721, Acc: 0.9749, mIoU: 0.7753
+Epoch 102/105: Train Loss: 0.0324, Acc: 0.9873, mIoU: 0.8423 | Val Loss: 0.0972, Acc: 0.9700, mIoU: 0.7558
+Epoch 103/105: Train Loss: 0.0316, Acc: 0.9876, mIoU: 0.8440 | Val Loss: 0.0870, Acc: 0.9723, mIoU: 0.7616
+Epoch 104/105: Train Loss: 0.0314, Acc: 0.9877, mIoU: 0.8456 | Val Loss: 0.1049, Acc: 0.9692, mIoU: 0.7554
+Epoch 105/105: Train Loss: 0.0313, Acc: 0.9877, mIoU: 0.8451 | Val Loss: 0.0792, Acc: 0.9740, mIoU: 0.7705
+Training completed.
+output.shape: (10, 512, 512, 4)
+test_masks_prediction.shape: (10, 512, 512, 2)
+训练与验证流程结束。
+Job ended at: Fri Jan 17 23:34:37 CST 2025
